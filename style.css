@@ -103,6 +103,7 @@ h1{
     background: white;
     color: #0052fe;
     box-shadow: 0 0 10px #00000079;
+    max-width: 90%;
 }
 
 .copy{
@@ -146,6 +147,7 @@ h1{
 
 .total-counter{
     font-size: 30px;
+    margin-bottom: 5px;
 }
 
 @media screen and (max-width: 700px){
@@ -181,6 +183,6 @@ h1{
     }
 
     .address{
-        font-size: 12px;
+        font-size: 10px;
     }
 }
