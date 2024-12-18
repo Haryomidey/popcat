@@ -103,6 +103,14 @@ clickableArea.addEventListener("touchend", handleTouchEnd);
 document.addEventListener("keydown", handleKeyDown);
 document.addEventListener("keyup", handleKeyUp);
 
+catStatic.addEventListener("contextmenu", (e) => {
+  e.preventDefault();
+});
+
+catPop.addEventListener("contextmenu", (e) => {
+  e.preventDefault();
+});
+
 setInterval(() => {
   randomIncrement();
 }, Math.random() * (60 * 1000));
