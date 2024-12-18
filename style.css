@@ -318,6 +318,14 @@ h1{
         font-size: 15px;
     }
 
+    #cat-pop {
+        display: block;
+    }
+
+    #cat-static {
+        display: none;
+    }
+
 }
 
 @media screen and (max-width: 400px){

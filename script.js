@@ -19,7 +19,7 @@ const handleCopyClick = () => {
   }).catch(err => {
     console.error("Failed to copy: ", err);
   });
-}
+};
 
 copyIcon.addEventListener("click", handleCopyClick);
 
@@ -54,7 +54,7 @@ function hidePopImage() {
 }
 
 function handleMouseDown() {
-    popSound.play();
+  popSound.play();
   showPopImage();
   updateScore(1);
 }
@@ -94,3 +94,15 @@ document.addEventListener("keyup", handleKeyUp);
 setInterval(() => {
   randomIncrement();
 }, Math.random() * (60 * 1000));
+
+window.onload = () => {
+  catStatic.style.display = "block";
+  catPop.style.display = "none";
+};
+
+window.addEventListener('resize', function() {
+  if (window.innerWidth <= 700) {
+    catPop.style.display = 'none';
+    catStatic.style.display = 'block';
+  }
+});
