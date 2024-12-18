@@ -16,6 +16,7 @@ body {
     overflow: hidden;
     padding: 0 10px;
     color: #0052fe;
+    user-select: none;
 }
   
 .container {
