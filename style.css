@@ -14,7 +14,7 @@ body {
     justify-content: space-between;
     position: relative;
     overflow: hidden;
-    padding: 20px 10px;
+    padding: 20px 10px 0;
     color: #0052fe;
     user-select: none;
     background-image: url('./images/background.png');
@@ -136,10 +136,11 @@ h1{
     width: 1000px;
     max-width: 90%;
     margin: 0 auto;
-    position: absolute;
+    /* margin-top: 40px; */
+    /* position: absolute;
     bottom: 0 !important;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%); */
     height: 100px;
 }
 
