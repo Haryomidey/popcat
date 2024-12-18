@@ -99,6 +99,7 @@ h1{
     flex-wrap: wrap;
     margin: 10px 0;
     gap: 10px;
+    margin-bottom: 30px;
 }
 
 .copy-box{
@@ -350,14 +351,6 @@ h1{
 
     .bottom-section{
         font-size: 15px;
-    }
-
-    #cat-pop {
-        display: block;
-    }
-
-    #cat-static {
-        display: none;
     }
 
 }
