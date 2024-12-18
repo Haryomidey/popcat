@@ -103,6 +103,7 @@ h1{
     max-width: 90%;
     margin: 10px auto;
     border-radius: 20px;
+    font-size: 15px;
 }
 
 .copy{
@@ -115,10 +116,6 @@ h1{
 
 .fa-check.hidden{
     display: none;
-}
-
-.address{
-    font-size: 15px;
 }
 
 .chart{
@@ -352,7 +349,7 @@ h1{
         font-size: 20px;
     }
 
-    .address{
+    .copy-box{
         font-size: 10px;
     }
 
