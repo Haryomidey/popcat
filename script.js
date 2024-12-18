@@ -19,7 +19,7 @@ const handleCopyClick = () => {
   }).catch(err => {
     console.error("Failed to copy: ", err);
   });
-};
+}
 
 copyIcon.addEventListener("click", handleCopyClick);
 
@@ -63,6 +63,16 @@ function handleMouseUp() {
   hidePopImage();
 }
 
+function handleTouchStart() {
+  popSound.play();
+  showPopImage();
+  updateScore(1);
+}
+
+function handleTouchEnd() {
+  hidePopImage();
+}
+
 function handleKeyDown(event) {
   if (!keyPressed) {
     popSound.play();
@@ -88,25 +98,11 @@ function randomIncrement() {
 
 clickableArea.addEventListener("mousedown", handleMouseDown);
 clickableArea.addEventListener("mouseup", handleMouseUp);
+clickableArea.addEventListener("touchstart", handleTouchStart);
+clickableArea.addEventListener("touchend", handleTouchEnd);
 document.addEventListener("keydown", handleKeyDown);
 document.addEventListener("keyup", handleKeyUp);
 
 setInterval(() => {
   randomIncrement();
 }, Math.random() * (60 * 1000));
-
-function checkMobileViewport() {
-  if (window.innerWidth <= 700) {
-    catPop.style.display = 'none';
-    catStatic.style.display = 'block';
-  } else {
-    catPop.style.display = 'block';
-    catStatic.style.display = 'none';
-  }
-}
-
-window.onload = () => {
-  checkMobileViewport();
-};
-
-window.addEventListener('resize', checkMobileViewport);
