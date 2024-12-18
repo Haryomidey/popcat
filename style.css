@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lobster&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+  
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* background: linear-gradient(to bottom, #f5e5cd, #c2a687); */
+    overflow: hidden;
+    padding: 0 10px;
+    color: #0052fe;
+}
+  
+.container {
+    flex: 1;
+    text-align: center;
+    position: relative;
+}
+
+.top-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    width: 100%;
+    padding: 10px;
+}
+
+.top-container img{
+    width: 100px;
+}
+
+.socials{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 30px;
+}
+  
+.top-score {
+    margin-top: 20px;
+    font-size: 40px;
+    font-weight: bold;
+}
+  
+.cat-container {
+    margin: 50px auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cat-container img {
+    margin-top: 80px;
+    width: 300px;
+    max-width: 90%;
+    cursor: pointer;
+    position: absolute;
+}
+  
+.total-counter {
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+  
+.white-section {
+    background-color: #0052fe;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 1000px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 700px){
+    .top-score{
+        font-size: 20px;
+    }
+
+    .cat-container img{
+        margin-top: 180px;
+    }
+
+    .total-counter{
+        font-size: 28px;
+    }
+
+    .white-section{
+        font-size: 15px;
+    }
+
+}
+
+@media screen and (max-width: 700px){
+    .top-score{
+        font-size: 15px;
+    }
+}
