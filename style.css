@@ -41,9 +41,8 @@ body {
     width: 100px;
 }
 
-h1{
-    color: white;
-    -webkit-text-stroke: 2px #0052fe;
+.based{
+    width: 300px !important;
 }
 
 .socials{
@@ -362,8 +361,8 @@ h1{
         width: 350px;
     }
     
-    h1{
-        font-size: 20px;
+    .based{
+        width: 150px !important;
     }
 
     .copy-box{
