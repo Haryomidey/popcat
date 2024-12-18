@@ -130,9 +130,7 @@ h1{
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    gap: 0;
-    font-size: 20px;
+    gap: 10px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     width: 1000px;
@@ -147,7 +145,6 @@ h1{
 
 .total-counter{
     font-size: 30px;
-    margin-bottom: 5px;
 }
 
 @media screen and (max-width: 700px){
