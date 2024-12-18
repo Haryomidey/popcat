@@ -3,6 +3,25 @@ const totalCounterEl = document.getElementById("total-counter");
 const clickableArea = document.getElementById("clickable-area");
 const catStatic = document.getElementById("cat-static");
 const catPop = document.getElementById("cat-pop");
+const copyIcon = document.querySelector(".fa-copy");
+const checkIcon = document.querySelector(".fa-check");
+const addressText = document.querySelector(".address");
+
+const handleCopyClick = () => {
+  navigator.clipboard.writeText(addressText.textContent).then(() => {
+    copyIcon.classList.add("hidden");
+    checkIcon.classList.remove("hidden");
+
+    setTimeout(() => {
+      checkIcon.classList.add("hidden");
+      copyIcon.classList.remove("hidden");
+    }, 2000);
+  }).catch(err => {
+    console.error("Failed to copy: ", err);
+  });
+}
+
+copyIcon.addEventListener("click", handleCopyClick);
 
 const popSound = new Audio("/pop-sound.mp3");
 
