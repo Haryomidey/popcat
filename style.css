@@ -111,7 +111,7 @@ h1{
     color: #0052fe;
     box-shadow: 0 0 10px #00000079;
     width: fit-content;
-    border-radius: 15px;
+    border-radius: 10px;
     font-size: 15px;
 }
 
@@ -136,7 +136,7 @@ h1{
     color: #0052fe;
     box-shadow: 0 0 10px #00000079;
     width: fit-content;
-    border-radius: 15px;
+    border-radius: 10px;
     text-decoration: none;
 }
 
