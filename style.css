@@ -180,7 +180,7 @@ h1{
 }
 
 .moving-clouds img:nth-child(2) {
-    top: 80px;
+    top: 250px;
     right: -50px;
     width: 120px;
     animation-duration: 82s;
@@ -188,7 +188,7 @@ h1{
 }
 
 .moving-clouds img:nth-child(3) {
-    top: 100px;
+    top: 150px;
     left: -30px;
     width: 150px;
     animation-duration: 85s;
@@ -196,28 +196,28 @@ h1{
 }
 
 .moving-clouds img:nth-child(4) {
-    top: 20px;
+    top: 200px;
     right: 50%;
     width: 130px;
     animation-duration: 28s;
 }
 
 .moving-clouds img:nth-child(5) {
-    top: 60px;
+    top: 160px;
     left: -40px;
     width: 70px;
     animation-duration: 90s;
 }
 
 .moving-clouds img:nth-child(6) {
-    top: 90px;
+    top: 190px;
     right: -45px;
     width: 90px;
     animation-duration: 80s;
 }
 
 .moving-clouds img:nth-child(7) {
-    top: 50px;
+    top: 100px;
     right: 50px;
     width: 100px;
     animation-duration: 35s;
@@ -240,7 +240,7 @@ h1{
 }
 
 .moving-clouds img:nth-child(10) {
-    top: 30px;
+    top: 170px;
     left: 300px;
     width: 90px;
     animation-duration: 40s;
