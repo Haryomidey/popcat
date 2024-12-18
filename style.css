@@ -139,7 +139,6 @@ body {
     padding: 15px;
     text-align: center;
     display: flex;
-    align-items: center;
     justify-content: center;
     gap: 10px;
     border-top-left-radius: 15px;
