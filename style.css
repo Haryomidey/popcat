@@ -145,6 +145,7 @@ h1{
 
 .total-counter{
     font-size: 30px;
+    padding-bottom: 7px;
 }
 
 @media screen and (max-width: 700px){
