@@ -84,6 +84,10 @@ body {
     width: 1000px;
     max-width: 90%;
     margin: 0 auto;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 @media screen and (max-width: 700px){
