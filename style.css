@@ -185,4 +185,8 @@ h1{
     .address{
         font-size: 10px;
     }
+
+    .bottom-section{
+        height: 120px;
+    }
 }
