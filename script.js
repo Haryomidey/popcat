@@ -4,6 +4,8 @@ const clickableArea = document.getElementById("clickable-area");
 const catStatic = document.getElementById("cat-static");
 const catPop = document.getElementById("cat-pop");
 
+const popSound = new Audio("/pop-sound.mp3");
+
 let totalClicks = parseInt(localStorage.getItem("totalClicks")) || 10492;
 let topScore = parseInt(localStorage.getItem("topScore")) || 0;
 let keyPressed = false;
@@ -33,6 +35,7 @@ function hidePopImage() {
 }
 
 function handleMouseDown() {
+    popSound.play();
   showPopImage();
   updateScore(1);
 }
@@ -43,6 +46,7 @@ function handleMouseUp() {
 
 function handleKeyDown(event) {
   if (!keyPressed) {
+    popSound.play();
     keyPressed = true;
     showPopImage();
     updateScore(1);
