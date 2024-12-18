@@ -95,14 +95,18 @@ setInterval(() => {
   randomIncrement();
 }, Math.random() * (60 * 1000));
 
-window.onload = () => {
-  catStatic.style.display = "block";
-  catPop.style.display = "none";
-};
-
-window.addEventListener('resize', function() {
+function checkMobileViewport() {
   if (window.innerWidth <= 700) {
     catPop.style.display = 'none';
     catStatic.style.display = 'block';
+  } else {
+    catPop.style.display = 'block';
+    catStatic.style.display = 'none';
   }
-});
+}
+
+window.onload = () => {
+  checkMobileViewport();
+};
+
+window.addEventListener('resize', checkMobileViewport);

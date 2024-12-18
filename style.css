@@ -92,6 +92,15 @@ h1{
     margin-top: 10px;
 }
 
+.chart-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 10px 0;
+    gap: 10px;
+}
+
 .copy-box{
     padding: 10px 20px;
     display: flex;
@@ -100,9 +109,8 @@ h1{
     background: white;
     color: #0052fe;
     box-shadow: 0 0 10px #00000079;
-    max-width: 90%;
-    margin: 10px auto;
-    border-radius: 20px;
+    width: fit-content;
+    border-radius: 15px;
     font-size: 15px;
 }
 
@@ -126,9 +134,8 @@ h1{
     background: white;
     color: #0052fe;
     box-shadow: 0 0 10px #00000079;
-    max-width: 90%;
-    margin: 0 auto 10px;
-    border-radius: 20px;
+    width: fit-content;
+    border-radius: 15px;
     text-decoration: none;
 }
 
@@ -141,7 +148,8 @@ h1{
     align-items: center;
     justify-content: center;
     gap: 10px;
-    border-radius: 20px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
     width: 1000px;
     max-width: 90%;
     margin: 0 auto;
