@@ -102,6 +102,7 @@ h1{
     transform: translateX(-50%);
     background: white;
     color: #0052fe;
+    box-shadow: 0 0 10px #00000079;
 }
 
 .copy{
