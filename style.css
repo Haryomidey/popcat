@@ -85,12 +85,6 @@ h1{
     cursor: pointer;
     position: absolute;
 }
-  
-.total-counter {
-    font-size: 50px;
-    font-weight: bold;
-    margin-top: 10px;
-}
 
 .chart-container{
     display: flex;
@@ -180,8 +174,8 @@ h1{
 }
 
 .total-counter{
-    font-size: 30px;
-    padding-bottom: 7px;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .moving-clouds {
