@@ -17,7 +17,7 @@ body {
     padding: 20px 0;
     color: #0052fe;
     background-image: url('./images/background.png');
-    background-size: cover;
+    background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
 }
