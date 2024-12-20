@@ -31,7 +31,7 @@ let keyPressed = false;
 
 async function fetchInitialScores() {
   try {
-    const response = await fetch("http://localhost:5000/api/get-score");
+    const response = await fetch("https://popcat-g5mg.onrender.com/api/get-score");
     const data = await response.json();
     totalClicks = data.totalClicks || 0;
 
@@ -50,7 +50,7 @@ async function updateScore(points) {
   topScoreEl.textContent = topScore.toLocaleString();
 
   try {
-    await fetch("http://localhost:5000/api/update-score", {
+    await fetch("https://popcat-g5mg.onrender.com/api/update-score", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
