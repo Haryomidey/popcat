@@ -19,28 +19,47 @@ const handleCopyClick = () => {
   }).catch(err => {
     console.error("Failed to copy: ", err);
   });
-}
+};
 
 copyIcon.addEventListener("click", handleCopyClick);
 
 const popSound = new Audio("/pop-sound.mp3");
 
-let totalClicks = parseInt(localStorage.getItem("totalClicks")) || 10492;
-let topScore = parseInt(localStorage.getItem("topScore")) || 0;
+let totalClicks = 0;
+let topScore = 0;
 let keyPressed = false;
 
-totalCounterEl.textContent = totalClicks.toLocaleString();
-topScoreEl.textContent = topScore.toLocaleString();
+async function fetchInitialScores() {
+  try {
+    const response = await fetch("http://localhost:5000/api/get-score");
+    const data = await response.json();
+    totalClicks = data.totalClicks || 0;
 
-function updateScore(points) {
+    totalCounterEl.textContent = totalClicks.toLocaleString();
+    topScoreEl.textContent = topScore.toLocaleString();
+  } catch (error) {
+    console.error("Error fetching initial scores:", error);
+  }
+}
+
+async function updateScore(points) {
   totalClicks += points;
   topScore += 1;
 
   totalCounterEl.textContent = totalClicks.toLocaleString();
   topScoreEl.textContent = topScore.toLocaleString();
 
-  localStorage.setItem("totalClicks", totalClicks);
-  localStorage.setItem("topScore", topScore);
+  try {
+    await fetch("http://localhost:5000/api/update-score", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ totalClicks, topScore }),
+    });
+  } catch (error) {
+    console.error("Error updating score:", error);
+  }
 }
 
 function showPopImage() {
@@ -87,15 +106,6 @@ function handleKeyUp() {
   hidePopImage();
 }
 
-function randomIncrement() {
-  const randomValue = Math.floor(Math.random() * 5) + 1;
-
-  totalClicks += randomValue;
-  totalCounterEl.textContent = totalClicks.toLocaleString();
-
-  localStorage.setItem("totalClicks", totalClicks);
-}
-
 clickableArea.addEventListener("mousedown", handleMouseDown);
 clickableArea.addEventListener("mouseup", handleMouseUp);
 clickableArea.addEventListener("touchstart", handleTouchStart);
@@ -111,6 +121,4 @@ catPop.addEventListener("contextmenu", (e) => {
   e.preventDefault();
 });
 
-setInterval(() => {
-  randomIncrement();
-}, Math.random() * (60 * 1000));
+fetchInitialScores();
